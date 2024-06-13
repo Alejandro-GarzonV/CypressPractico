@@ -4,7 +4,8 @@
   "description": "practica de cypress actualizacion 2024",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "cy:open": "cypress open"
   },
   "keywords": [
     "e2e",
