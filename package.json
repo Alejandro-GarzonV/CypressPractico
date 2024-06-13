@@ -1,19 +1,14 @@
 {
   "name": "cypresspractico",
   "version": "1.0.0",
-  "description": "practica de cypress actualizacion 2024",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open"
   },
-  "keywords": [
-    "e2e",
-    "automation",
-    "framework",
-    "cypress"
-  ],
-  "author": "alejandro garzon",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.11.0"
