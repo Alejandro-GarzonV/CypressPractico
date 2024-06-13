@@ -1,0 +1,20 @@
+{
+  "name": "cypresspractico",
+  "version": "1.0.0",
+  "description": "practica de cypress actualizacion 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "e2e",
+    "automation",
+    "framework",
+    "cypress"
+  ],
+  "author": "alejandro garzon",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.11.0"
+  }
+}
