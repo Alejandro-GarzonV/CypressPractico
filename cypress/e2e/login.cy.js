@@ -9,6 +9,9 @@ describe('Login', () => {
     cy.get('#login2').click()
     cy.get('#loginusername').type('prueba900')
     cy.get('#loginpassword').type('prueba900')
+    cy.get('#loginusername').closest('#logInModal .modal-body').then(parent=>{
+      cy.log(parent.attr('class'))
+    })
     cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
     //cy.wait(20000)
     cy.get('#nameofuser').should('exist')
@@ -16,6 +19,9 @@ describe('Login', () => {
     cy.contains('a','Log out').should('be.visible').then(tittle =>{
       cy.log(tittle.attr('class'))
     })
+
+    
+    
 
   })
 })
