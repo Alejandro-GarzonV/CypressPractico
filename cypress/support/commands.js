@@ -34,4 +34,3 @@ Cypress.Commands.add('Login', (username, pwd) => {
     cy.get('#nameofuser').should('exist') 
   })
   
-  
