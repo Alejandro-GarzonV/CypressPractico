@@ -1,4 +1,5 @@
 node_modules/*
 screenshots/*
+cypress/screenshots/*
 videos/*
-cypress/videos/login.cy.js.mp4
+cypress/videos/*
