@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@shelex/cypress-allure-plugin": "^2.40.2",
-    "cypress": "^12.14.0"
+    "@mmisty/cypress-allure-adapter": "^0.16.11",
+    "allure-commandline": "^2.29.0",
+    "cypress": "^13.11.0"
+  },
+  "dependencies": {
+    "process": "^0.11.10"
   }
 }
