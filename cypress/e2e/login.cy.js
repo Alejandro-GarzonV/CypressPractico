@@ -10,12 +10,5 @@ describe('Login', () => {
     //})
     cy.Login('pruebas900','pruebas900') 
     
-   // cy.contains('a','Log out').should('be.visible').then(tittle =>{
-   //   cy.log(tittle.attr('class'))
-   // })
-   //
-    
-    
-
   })
 })
