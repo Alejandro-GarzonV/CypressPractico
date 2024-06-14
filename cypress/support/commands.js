@@ -30,7 +30,9 @@ Cypress.Commands.add('Login', (username, pwd) => {
     cy.get('#login2').click()
     cy.get('#loginusername').type(username)
     cy.get('#loginpassword').type(pwd)
+    cy.wait(5000)
     cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+    cy.wait(5000)
     cy.get('#nameofuser').should('exist') 
   })
   

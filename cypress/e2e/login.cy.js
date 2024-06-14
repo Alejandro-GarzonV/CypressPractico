@@ -8,12 +8,12 @@ describe('Login', () => {
     //cy.get('#loginusername').closest('#logInModal .modal-body').then(parent=>{
     //  cy.log(parent.attr('class'))
     //})
-    cy.Login('pruebas900','pruebas900')
+    cy.Login('pruebas900','pruebas900') 
     
    // cy.contains('a','Log out').should('be.visible').then(tittle =>{
    //   cy.log(tittle.attr('class'))
    // })
-   //cy.wait(20000)
+   //
     
     
 
