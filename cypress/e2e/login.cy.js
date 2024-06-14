@@ -4,22 +4,16 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 });
 describe('Login', () => {
   it('Login con credenciales', () => {
-    cy.visit('https://www.demoblaze.com/')
-    cy.viewport(1280, 720)
-    cy.get('#login2').click()
-    cy.get('#loginusername').type('prueba900')
-    cy.get('#loginpassword').type('prueba900')
-    cy.get('#loginusername').closest('#logInModal .modal-body').then(parent=>{
-      cy.log(parent.attr('class'))
-    })
-    cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
-    //cy.wait(20000)
-    cy.get('#nameofuser').should('exist')
-
-    cy.contains('a','Log out').should('be.visible').then(tittle =>{
-      cy.log(tittle.attr('class'))
-    })
-
+    
+    //cy.get('#loginusername').closest('#logInModal .modal-body').then(parent=>{
+    //  cy.log(parent.attr('class'))
+    //})
+    cy.Login('pruebas900','pruebas900')
+    
+   // cy.contains('a','Log out').should('be.visible').then(tittle =>{
+   //   cy.log(tittle.attr('class'))
+   // })
+   //cy.wait(20000)
     
     
 

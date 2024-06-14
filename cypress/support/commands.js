@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('Login', (username, pwd) => {
+    cy.visit('https://www.demoblaze.com/')
+    cy.viewport(1280, 720)
+    cy.get('#login2').click()
+    cy.get('#loginusername').type(username)
+    cy.get('#loginpassword').type(pwd)
+    cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+    cy.get('#nameofuser').should('exist') 
+  })
