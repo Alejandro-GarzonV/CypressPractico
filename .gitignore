@@ -3,5 +3,6 @@ screenshots/*
 cypress/screenshots/*
 videos/*
 cypress/videos/*
-cypress/allure-report/*
-cypress/allure-results/*
+cypress/allure-report
+cypress/allure-results
+
