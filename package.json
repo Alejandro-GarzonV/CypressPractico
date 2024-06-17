@@ -7,7 +7,8 @@
     "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
     "ejecutar-pruebas": "cypress run --browser chrome --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
-    "Abrir-reporte": "allure open",
+    "abrir-reporte": "allure open",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-reporte",
     "cy:open": "cypress open"
   },
   "keywords": [],
