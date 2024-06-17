@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "limpiar-reporte":"rimraf ./allure-report && rimraf ./allure-results",
-    "ejecutar-pruebas":"cypress run --browser chrome --headed --env allure=true",
+    "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
+    "ejecutar-pruebas": "cypress run --browser chrome --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
-    "Abrir-reporte":"allure open",
+    "Abrir-reporte": "allure open",
     "cy:open": "cypress open"
-
   },
   "keywords": [],
   "author": "",
@@ -17,7 +16,8 @@
   "devDependencies": {
     "@mmisty/cypress-allure-adapter": "^0.16.11",
     "allure-commandline": "^2.29.0",
-    "cypress": "^13.11.0"
+    "cypress": "^13.11.0",
+    "rimraf": "^5.0.7"
   },
   "dependencies": {
     "process": "^0.11.10"
