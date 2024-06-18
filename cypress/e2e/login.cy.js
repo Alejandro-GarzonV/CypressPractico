@@ -13,8 +13,7 @@ describe('Login', () => {
     cy.contains('a','Log out').should('be.visible').then(tittle =>{
       cy.log(tittle.attr('class'))
       })
-    cy.get('#nameofuser').should('exist') 
+    cy.get('#nameofuser').should('exist').should('contain.text','Pruebas900') 
     cy.wait(2000)
-    
   })
 })

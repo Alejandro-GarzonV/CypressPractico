@@ -6,10 +6,10 @@ export class loginMethods {
             LoginElements.Labels.loginLabel.click();
         }
         static insertUsername(username){
-            LoginElements.textboxes.username.type(username)
+            LoginElements.textboxes.username.invoke('val',username)
         }
         static insertPassword(password){
-            LoginElements.textboxes.password.type(password)
+            LoginElements.textboxes.password.invoke('val',password)
         }
         static clickOnLoginButton(){
            LoginElements.buttons.login.click();
@@ -18,9 +18,7 @@ export class loginMethods {
         static login (username,password){
             this.clickOnLoginLabel()
             this.insertUsername(username)
-            cy.wait(1500)
             this.insertPassword(password)
-            cy.wait(1500)
             this.clickOnLoginButton()
         }
     
