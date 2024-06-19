@@ -1,7 +1,9 @@
 import { CartMethods } from "./Pages/Cart/cart.methods";
 import { HomeMethods } from "./Pages/Home/home.methods";
 import { loginMethods } from "./Pages/Login/login.methods";
+import { PlaceOrderMethods } from "./Pages/Place-Order/place-order.methods";
 import { ProductDetailsMethods } from "./Pages/Product-Details/product-details.methods";
+import { ThankYouforYourPurchaseMethods } from "./Pages/Thank-You-for-Your-Purchase/Thank-You-for-Your-Purchase.methods";
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // Retorna false para evitar que Cypress falle la prueba
@@ -30,5 +32,11 @@ describe('Demoblaze', () => {
     //CartMethods.clickOnDeleteLink('Iphone 6 32gb')
     cy.wait(1000)
     CartMethods.clickOnButtonPlaceOrder()
+    cy.wait(1000)
+    PlaceOrderMethods.PlaceOrder('PruebaN1','Colombia','Bogota','4239383687554316','06','2024')
+    cy.wait(1000)
+    ThankYouforYourPurchaseMethods.verifyGreenIsDisplayed(),
+    ThankYouforYourPurchaseMethods.clickOnOkButton()
+
   })
 })
