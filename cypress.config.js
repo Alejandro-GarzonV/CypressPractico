@@ -1,8 +1,6 @@
 const { defineConfig } = require("cypress");
 const { configureAllureAdapterPlugins } = require('@mmisty/cypress-allure-adapter/plugins');
 
-
-
 module.exports = defineConfig({
   //retries:1, // ESTO  REINTENTA LOS FALLIDOS PERO NO CAMBIA EL RESULTADO EN TIEMPOS
   env: {
