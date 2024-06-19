@@ -12,21 +12,24 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe('Demoblaze', () => {
   it('Paginas  de demoblaze', () => {
     cy.visit('https://www.demoblaze.com/')
-    cy.viewport(1280, 720)
     loginMethods.login('Pruebas900','Pruebas900')
+
+    //las validaciones toca cambiarlas  por  buenas practicas ya que aca no es lo correcto
     cy.contains('a','Log out').should('be.visible').then(tittle =>{
     cy.log(tittle.attr('class'))
      })
     cy.get('#nameofuser').should('exist').should('contain.text','Pruebas900') 
+    //finde las  validaciones 
+
     HomeMethods.clickOnProductLink('Iphone 6 32gb')
     ProductDetailsMethods.clickOnAddToCardButton()
     cy.wait(1000)
-    cy.get('.active > .nav-link').click();
+    cy.get('.active > .nav-link').click();//viaja al home
     cy.wait(1000)
     HomeMethods.clickOnProductLink('Nexus 6')
     ProductDetailsMethods.clickOnAddToCardButton()
     cy.wait(1000)
-    cy.get('#cartur').click();
+    cy.get('#cartur').click();//viaja al cart
     cy.wait(3000)
     CartMethods.clickOnDeleteLink('Nexus 6')
     //CartMethods.clickOnDeleteLink('Iphone 6 32gb')

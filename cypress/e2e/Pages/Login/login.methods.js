@@ -20,6 +20,7 @@ export class loginMethods {
             this.insertUsername(username)
             this.insertPassword(password)
             this.clickOnLoginButton()
+            
         }
     
 }

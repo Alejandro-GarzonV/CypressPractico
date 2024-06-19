@@ -20,6 +20,8 @@ module.exports = defineConfig({
     issuePrefix: 'http://jira.com/PROJECT-1/*/browse'
   },
   e2e: {
+    viewportWidth: 1280, // Ancho del viewport en píxeles
+    viewportHeight: 720, // Alto del viewport en píxeles
     setupNodeEvents(on, config) {
       configureAllureAdapterPlugins(on, config);
       // Si usas el evento after:spec
