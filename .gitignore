@@ -1,9 +1,6 @@
 node_modules/*
-
 allure-report/*
-
 allure-results/*
-
 screenshots/*
 cypress/screenshots/*
 videos/*
