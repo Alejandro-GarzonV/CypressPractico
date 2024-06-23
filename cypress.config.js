@@ -1,9 +1,5 @@
 const { defineConfig } = require("cypress");
 const { configureAllureAdapterPlugins } = require('@mmisty/cypress-allure-adapter/plugins');
-//For Cucumber Integration
-const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
-const addCucumberPreprocessorPlugin = require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
-const createEsbuildPlugin =  require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
 module.exports = defineConfig({
   //retries:1, // ESTO  REINTENTA LOS FALLIDOS PERO NO CAMBIA EL RESULTADO EN TIEMPOS
@@ -28,12 +24,7 @@ module.exports = defineConfig({
 
 
     setupNodeEvents(on, config) {
-      // configuracion  cucumber 
-      const bundler = createBundler({
-        plugins: [createEsbuildPlugin(config)],
-      });
-
-      on('file:preprocessor', createBundler());
+      
       configureAllureAdapterPlugins(on, config);
 
       // Si usas el evento after:spec
@@ -43,8 +34,7 @@ module.exports = defineConfig({
       });
       return config;
     },
-    specPattern: "cypress/e2e/features/*.feature",
-    chromeWebSecurity: false,
+    
   },
  // "pageLoadTimeout": 120000,
 });

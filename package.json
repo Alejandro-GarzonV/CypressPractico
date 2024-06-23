@@ -15,22 +15,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1",
-    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@mmisty/cypress-allure-adapter": "^0.16.11",
     "allure-commandline": "^2.29.0",
-    "cypress": "^13.12.0",
-    "esbuild": "^0.21.5",
     "rimraf": "^5.0.7"
   },
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^20.0.7",
     "process": "^0.11.10"
-  },
-  "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/e2e/step_definitions/**/*.{js,ts}",
-    "html": {
-      "enabled": true
-    }
   }
 }
