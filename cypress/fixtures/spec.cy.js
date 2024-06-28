@@ -1,9 +1,9 @@
-import { CartMethods } from "./Pages/Cart/cart.methods";
-import { HomeMethods } from "./Pages/Home/home.methods";
-import { loginMethods } from "./Pages/Login/login.methods";
-import { PlaceOrderMethods } from "./Pages/Place-Order/place-order.methods";
-import { ProductDetailsMethods } from "./Pages/Product-Details/product-details.methods";
-import { ThankYouforYourPurchaseMethods } from "./Pages/Thank-You-for-Your-Purchase/Thank-You-for-Your-Purchase.methods";
+import { CartMethods } from "../e2e/Pages/Cart/cart.methods";
+import { HomeMethods } from "../e2e/Pages/Home/home.methods";
+import { loginMethods } from "../e2e/Pages/Login/login.methods";
+import { PlaceOrderMethods } from "../e2e/Pages/Place-Order/place-order.methods";
+import { ProductDetailsMethods } from "../e2e/Pages/Product-Details/product-details.methods";
+import { ThankYouforYourPurchaseMethods } from "../e2e/Pages/Thank-You-for-Your-Purchase/Thank-You-for-Your-Purchase.methods";
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // Retorna false para evitar que Cypress falle la prueba
