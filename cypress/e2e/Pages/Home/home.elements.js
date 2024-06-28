@@ -6,6 +6,7 @@ export class HomeElements {
             get laptops(){ cy.contains("a", "Laptops"); },
             get monitors(){ cy.contains("a", "Monitors");},
         }
+        //a[contains(text(),'Phones')]
     }
     static product (productName) {
     return cy.contains("a", productName);

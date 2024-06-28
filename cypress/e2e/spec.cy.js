@@ -40,6 +40,5 @@ describe('Demoblaze', () => {
     cy.wait(1000)
     ThankYouforYourPurchaseMethods.verifyGreenIsDisplayed(),
     ThankYouforYourPurchaseMethods.clickOnOkButton()
-
   })
 })
